@@ -31,9 +31,16 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experience</h2>
+      <h2 className="head-text">
+        <span>Skills & Experience</span>
+      </h2>
 
       <div className="app__skills-container">
+        <img
+          className="background-logo-pic"
+          src="./src/assets/Hadar_Logo3.png"
+          alt="toto_logo"
+        />
         <motion.div className="app__skills-list">
           {skills.map((skill, i) => (
             <motion.div

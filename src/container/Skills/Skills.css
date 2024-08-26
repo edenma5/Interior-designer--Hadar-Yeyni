@@ -2,6 +2,7 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
+  position: relative;
 }
 
 .app__skills-container {
@@ -9,6 +10,15 @@
   margin-top: 3rem;
   display: flex;
   flex-direction: row;
+}
+.app__skills-container .background-logo-pic {
+  width: 40%;
+  right: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .app__skills-container .background-logo-pic {
+    width: 65%;
+  }
 }
 @media screen and (max-width: 900px) {
   .app__skills-container {

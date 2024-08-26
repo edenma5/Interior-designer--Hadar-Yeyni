@@ -1,6 +1,5 @@
 #home {
     position: relative;
-    // background: url('../../assets/bgIMG.png');
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
@@ -20,6 +19,16 @@
     height: 100%;
     flex-direction: row;
     padding: 6rem 2rem 0;
+
+    .background-logo-pic {
+        height: 100vh;
+        width: auto;
+        top: 0;
+
+        @media screen and (max-width: 768px) {
+            width: 100vw;
+        }
+    }
 
     @media screen and (min-width: 2000px) {
         padding-top: 8rem;

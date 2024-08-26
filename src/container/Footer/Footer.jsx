@@ -45,7 +45,14 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Take coffee && chat with me</h2>
+      <h2 className="head-text">
+        <q>
+          רק מי שלוקח סיכון <span>והולך רחוק</span>
+          <br />
+          מגלה עד <span>כמה רחוק</span> הוא יכול להגיע
+        </q>
+        <span className="head-text-author">אלברט איינשטיין</span>
+      </h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
@@ -113,5 +120,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, "app__footer"),
   "צור קשר",
-  "app__primarybg"
+  ".app__primarybg"
 );

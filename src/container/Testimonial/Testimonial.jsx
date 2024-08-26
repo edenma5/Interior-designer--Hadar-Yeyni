@@ -30,6 +30,14 @@ const Testimonial = () => {
 
   return (
     <>
+      <img
+        className="background-logo-pic"
+        src="./src/assets/Hadar_Logo3.png"
+        alt="toto_logo"
+      />
+      <h2 className="head-text">
+        <span>חוות דעת</span>
+      </h2>
       {testimonials.length && (
         <>
           <div className="app__testimonial-item app__flex">
@@ -92,6 +100,6 @@ const Testimonial = () => {
 
 export default AppWrap(
   MotionWrap(Testimonial, "app__testimonial"),
-  "המלצות",
+  "חוות דעת",
   "app__primarybg"
 );

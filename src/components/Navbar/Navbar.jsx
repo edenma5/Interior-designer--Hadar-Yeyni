@@ -9,7 +9,7 @@ const navbarNames = [
   "אודות",
   "פרוייקטים",
   "כישורים",
-  "המלצות",
+  "חוות דעת",
   "צור קשר",
 ];
 
@@ -17,23 +17,6 @@ export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   return (
     <nav className="app__navbar">
-      <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
-      </div>
-
-      <ul className="app__navbar-links">
-        {navbarNames.map((item) => {
-          return (
-            <li className="app__flex p-text" key={`link-${item}`}>
-              <div />
-              <a href={`#${item}`}>{item}</a>
-            </li>
-          );
-        })}
-      </ul>
-
-      <div className="app__navbar-logo"></div>
-
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
@@ -41,6 +24,7 @@ export default function Navbar() {
           <motion.div
             whileInView={{ x: [150, 0] }}
             transition={{ duration: 0.7, ease: "easeOut" }}
+            className="app__navbar-mobile-menu"
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
@@ -57,6 +41,22 @@ export default function Navbar() {
           </motion.div>
         )}
       </div>
+      <div className="app__navbar-logo">
+        <img src={images.logo} alt="logo" />
+      </div>
+
+      <ul className="app__navbar-links">
+        {navbarNames.map((item) => {
+          return (
+            <li className="app__flex p-text" key={`link-${item}`}>
+              <div />
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          );
+        })}
+      </ul>
+
+      {/* <div className="app__navbar-logo"></div> */}
     </nav>
   );
 }

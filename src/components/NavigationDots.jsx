@@ -5,7 +5,7 @@ const navbarNames = [
   "אודות",
   "פרוייקטים",
   "כישורים",
-  "המלצות",
+  "חוות דעת",
   "צור קשר",
 ];
 export default function NavigationDots({ active }) {

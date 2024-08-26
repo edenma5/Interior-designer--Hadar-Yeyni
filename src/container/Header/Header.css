@@ -18,6 +18,16 @@
   flex-direction: row;
   padding: 6rem 2rem 0;
 }
+.app__header .background-logo-pic {
+  height: 100vh;
+  width: auto;
+  top: 0;
+}
+@media screen and (max-width: 768px) {
+  .app__header .background-logo-pic {
+    width: 100vw;
+  }
+}
 @media screen and (min-width: 2000px) {
   .app__header {
     padding-top: 8rem;

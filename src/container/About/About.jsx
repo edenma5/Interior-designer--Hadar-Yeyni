@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
 import { urlFor, client } from "../../client";
+import { images } from "../../constants";
 
 function About() {
   const [abouts, setAbouts] = useState([]);
@@ -16,16 +17,26 @@ function About() {
   return (
     <>
       <h2 className="head-text">
-        <q>
-          רק מי שלוקח סיכון <span>והולך רחוק</span>
-          <br />
-          מגלה עד <span>כמה רחוק</span> הוא יכול להגיע
-        </q>
-        <span className="head-text-author">אלברט איינשטיין</span>
+        <span>קצת עלי</span>
       </h2>
+      <motion.div
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 1.5, delayChildren: 0.5 }}
+        className="app__header-img"
+      >
+        <img className="profilePic" src={images.profile} alt="profile_bg" />
+
+        <motion.img
+          whileInView={{ scale: [0, 1] }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="overlay_circle"
+          src={images.logo2}
+          alt="profile_circl"
+        />
+      </motion.div>
       <div className="app__profiles">
         <h2 className="bold-text" style={{ marginTop: 20 }}>
-          אז נעים להכיר,
+          נעים להכיר,
         </h2>
         <p className="p-text" style={{ marginTop: 10 }}>
           שמי הדר ייני מעצבת פנים, בוגרת לימודי שנקר לעיצוב פנים, נשואה לעדי

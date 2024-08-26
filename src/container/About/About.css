@@ -1,39 +1,88 @@
 .app__about {
   flex: 1;
   width: 100%;
-  flex-direction: column;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 20% 1fr;
+  grid-template-areas: "header header" "content picture";
 }
-
-.app__profiles {
+@media screen and (max-width: 768px) {
+  .app__about {
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header header" "picture picture" "content content";
+    padding: unset;
+    row-gap: 2rem;
+  }
+}
+.app__about .head-text {
+  grid-area: header;
+  margin: 0 auto;
+  max-width: 50rem;
+}
+@media screen and (min-width: 2000px) {
+  .app__about .head-text {
+    max-width: 70rem;
+  }
+}
+.app__about .app__header-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  grid-area: picture;
+}
+.app__about .app__header-img .profilePic {
+  width: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: 1;
+  opacity: 0.9;
+}
+.app__about .app__header-img .overlay_circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7rem;
+  z-index: 0;
+  width: 95%;
+  max-width: 40rem;
+  opacity: 0.6;
+  margin: 0 auto;
+}
+.app__about .app__header-img .small_circle {
+  position: absolute;
+  width: 30%;
+  z-index: 0;
+  top: 0;
+  left: 5%;
+  opacity: 0.7;
+}
+.app__about .app__profiles {
+  grid-area: content;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-top: 2rem;
-  width: 50%;
-}
-
-.app__profile-item {
-  width: 190px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  margin: 2rem;
-}
-.app__profile-item img {
   width: 100%;
-  height: 170px;
-  border-radius: 15px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  padding: 0 13rem;
+  padding-left: 1rem;
 }
-@media screen and (min-width: 2000px) {
-  .app__profile-item {
-    width: 370px;
-    margin: 2rem 4rem;
+@media screen and (max-width: 768px) {
+  .app__about .app__profiles {
+    padding: unset;
   }
-  .app__profile-item img {
-    height: 320px;
+}
+.app__about .app__profiles .p-text {
+  letter-spacing: 2px;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .app__about .app__profiles .p-text {
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=About.css.map */

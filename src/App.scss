@@ -1,3 +1,7 @@
+body:has(.app__navbar-mobile-menu) {
+    overflow: hidden;
+}
+
 .app {
     background-color: var(--primary-color);
     font-family: var(--font-base);
@@ -11,12 +15,23 @@
     background-color: var(--primary-color);
 }
 
+.app__secondarybg {
+    background-color: var(--secondary-color);
+}
+
 .app__container {
     width: 100%;
     min-height: 100vh;
 
     display: flex;
     flex-direction: row;
+}
+
+.background-logo-pic {
+
+    position: absolute;
+    width: 25rem;
+    opacity: .05;
 }
 
 .app__flex {
@@ -114,9 +129,9 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: var(--white-color);
+        background-color: var(--secondary-color);
         margin: 0.25rem 0;
-        border: 1px solid var(--lightGray-color);
+        border: 1px solid var(--secondary-color);
 
         display: flex;
         justify-content: center;
@@ -127,15 +142,15 @@
         svg {
             width: 15px;
             height: 15px;
-            color: var(--gray-color);
+            color: var(--white-color);
         }
 
         &:hover {
-            background-color: var(--secondary-color);
+            background-color: var(--white-color);
             border-color: var(--secondary-color);
 
             svg {
-                color: var(--white-color);
+                color: var(--secondary-color);
             }
         }
 

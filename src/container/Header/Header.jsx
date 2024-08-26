@@ -19,13 +19,13 @@ const scaleVariants = {
 function Header() {
   return (
     <div className="app__header app__flex">
-      <motion.div
+      {/* <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.7 }}
         className="app__header-info"
-      ></motion.div>
+      ></motion.div> */}
 
-      <motion.div
+      {/* <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1.5, delayChildren: 0.5 }}
         className="app__header-img"
@@ -39,7 +39,13 @@ function Header() {
           src={images.logo2}
           alt="profile_circl"
         />
-      </motion.div>
+      </motion.div> */}
+
+      <img
+        className="background-logo-pic"
+        src="./src/assets/Hadar_Logo3.png"
+        alt="toto_logo"
+      />
 
       <motion.div
         variants={scaleVariants}
