@@ -198,6 +198,7 @@
             width: 75%;
             max-width: 70rem;
             max-height: 45rem;
+            min-height: 15rem;
             padding: 5rem 10rem;
             background-color: #e4e4e433;
             box-shadow: 0 0 1px 0px #622626;
@@ -228,9 +229,13 @@
                     border: unset;
                     cursor: pointer;
                     font-size: 1.5rem;
-                    background: var(--primary-color);
                     color: var(--secondary-color);
                     border-radius: 50%;
+                    transition: background .2s ease-in-out;
+
+                    &:hover {
+                        background: var(--primary-color);
+                    }
 
                     @media screen and (max-width:900px) {
                         font-size: 1rem;

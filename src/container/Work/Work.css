@@ -183,6 +183,7 @@
   width: 75%;
   max-width: 70rem;
   max-height: 45rem;
+  min-height: 15rem;
   padding: 5rem 10rem;
   background-color: rgba(228, 228, 228, 0.2);
   box-shadow: 0 0 1px 0px #622626;
@@ -214,9 +215,12 @@
   border: unset;
   cursor: pointer;
   font-size: 1.5rem;
-  background: var(--primary-color);
   color: var(--secondary-color);
   border-radius: 50%;
+  transition: background 0.2s ease-in-out;
+}
+.photos-slider-wrapper .photos-slider-container .photos-slider-parent .photos-slider .close-btn:hover {
+  background: var(--primary-color);
 }
 @media screen and (max-width: 900px) {
   .photos-slider-wrapper .photos-slider-container .photos-slider-parent .photos-slider .close-btn {
