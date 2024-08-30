@@ -5,6 +5,7 @@ import ReactTooltip from "react-tooltip";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Skills.scss";
+import { images } from "../../constants";
 
 const Skills = () => {
   const [experience, setExperience] = useState([]);
@@ -38,7 +39,7 @@ const Skills = () => {
       <div className="app__skills-container">
         <img
           className="background-logo-pic"
-          src="./src/assets/Hadar_Logo3.png"
+          src={images.logo3}
           alt="toto_logo"
         />
         <motion.div className="app__skills-list">

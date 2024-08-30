@@ -5,6 +5,7 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Work.scss";
 import PhotosSlider from "./PhotosSlider";
+import { images } from "../../constants";
 
 const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
@@ -48,11 +49,7 @@ const Work = () => {
       <h2 className="head-text">
         <span>הפרוייקטים שלי</span>
       </h2>
-      <img
-        className="background-logo-pic"
-        src="./src/assets/Hadar_Logo3.png"
-        alt="toto_logo"
-      />
+      <img className="background-logo-pic" src={images.logo3} alt="toto_logo" />
 
       <motion.div
         animate={{ y: 0, opacity: 1 }}

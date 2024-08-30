@@ -41,11 +41,7 @@ function Header() {
         />
       </motion.div> */}
 
-      <img
-        className="background-logo-pic"
-        src="./src/assets/Hadar_Logo3.png"
-        alt="toto_logo"
-      />
+      <img className="background-logo-pic" src={images.logo3} alt="toto_logo" />
 
       <motion.div
         variants={scaleVariants}
