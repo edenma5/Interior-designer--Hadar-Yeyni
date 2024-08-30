@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Testimonial.scss";
+import { images } from "../../constants";
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,11 +31,7 @@ const Testimonial = () => {
 
   return (
     <>
-      <img
-        className="background-logo-pic"
-        src="./src/assets/Hadar_Logo3.png"
-        alt="toto_logo"
-      />
+      <img className="background-logo-pic" src={images.logo3} alt="toto_logo" />
       <h2 className="head-text">
         <span>חוות דעת</span>
       </h2>
